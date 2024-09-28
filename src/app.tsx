@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './app.scss';
 
@@ -22,6 +22,10 @@ const App: React.FC = () => {
     setSelectedSlot('');
     setSelectedTime('');
   };
+
+  useEffect(() => {
+    setSelectedTime('');
+  }, [selectedSlot]);
 
   const handleSlotSelection = () => {
     console.log('slot selected', selectedTime, selectedSlot);

@@ -19,7 +19,7 @@ exports[`renders the component successfully 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-dahpuh-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-tcjmn5-MuiSvgIcon-root"
             data-testid="ArrowBackIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -66,7 +66,7 @@ exports[`renders the component successfully 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-dahpuh-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-tcjmn5-MuiSvgIcon-root"
             data-testid="ArrowForwardIcon"
             focusable="false"
             viewBox="0 0 24 24"

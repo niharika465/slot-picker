@@ -135,7 +135,6 @@ const Slider: React.FC<SliderProps> = ({
           <Icons.backIcon
             sx={{
               color: grey[500],
-              cursor: isScrollAtInitial ? 'not-allowed' : 'pointer',
               marginTop: '8px',
             }}
           />
@@ -174,7 +173,6 @@ const Slider: React.FC<SliderProps> = ({
           <Icons.forwardIcon
             sx={{
               color: grey[500],
-              cursor: isScrollAtLast ? 'not-allowed' : 'pointer',
               marginTop: '8px',
             }}
           />
