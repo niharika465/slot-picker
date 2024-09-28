@@ -1,3 +1,7 @@
+# live demo
+
+https://slot-picker-prompter.netlify.app/
+
 # How to run the project on system
 * open a cmd line on the root directory
 
