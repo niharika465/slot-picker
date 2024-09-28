@@ -25,6 +25,7 @@ const Slider: React.FC<SliderProps> = ({
 }) => {
   const [isScrollAtInitial, setIsScrollAtInitial] = useState<boolean>(false); // this state will hold true if the cards have not been scrolled at all
   const [isScrollAtLast, setIsScrollAtLast] = useState<boolean>(false); // this state will hold true if the cards have been scrolled to the last
+  const [lastVisibleIndex, setLastVisibleIndex] = useState<number | null>(null); // to store the last fully visible card index
 
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]); // will store references to each card's DOM element
   const observer = useRef<IntersectionObserver | null>(null); // will help detect when cards are visible in the viewport
@@ -32,6 +33,24 @@ const Slider: React.FC<SliderProps> = ({
 
   const updateScrollPositionDetails = () => {
     // this will be update based on weather the scroll bar has been touched
+
+    let index: number | null = null;
+    const containerRect = containerRef.current?.getBoundingClientRect();
+    // initialize index to null and get the bounding rectangle of the container to know its position
+    cardsRef.current.forEach((card, i) => {
+      // loop through the cards stored in cardsRef
+      if (card) {
+        const rect = card.getBoundingClientRect();
+        const isFullyVisible =
+          rect.left >= (containerRect?.left || 0) &&
+          rect.right <= (containerRect?.right || 0);
+        // if the card is fully visible by checking if its left and right edges are within the container's edges
+        if (isFullyVisible) {
+          index = i; // Update last visible index
+        }
+      }
+    });
+    setLastVisibleIndex(index);
     const { scrollLeft, scrollWidth, clientWidth } =
       containerRef.current as HTMLDivElement;
     setIsScrollAtInitial(containerRef.current?.scrollLeft === 0);
@@ -123,6 +142,7 @@ const Slider: React.FC<SliderProps> = ({
   return (
     <div>
       <div className="heading">{heading}</div>
+      <div>{lastVisibleIndex}</div>
       <div className="slider">
         <div
           className={classNames('navigation-btn', {
@@ -164,10 +184,12 @@ const Slider: React.FC<SliderProps> = ({
 
         <div
           className={classNames('navigation-btn', {
-            'navigation-btn--disabled': isScrollAtLast,
+            'navigation-btn--disabled':
+              lastVisibleIndex === cards.length - 1 || isScrollAtLast,
           })}
           onClick={() => {
-            if (!isScrollAtLast) scrollToCard('next');
+            if (lastVisibleIndex !== cards.length - 1 || isScrollAtLast)
+              scrollToCard('next');
           }}
         >
           <Icons.forwardIcon

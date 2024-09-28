@@ -8,6 +8,9 @@ exports[`Slider renders cards 1`] = `
     >
       Pick a date
     </div>
+    <div>
+      5
+    </div>
     <div
       class="slider"
     >
