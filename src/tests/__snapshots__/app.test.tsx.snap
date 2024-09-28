@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component successfully 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div>
+      <div
+        class="heading"
+      >
+        Pick a date
+      </div>
+      <div
+        class="slider"
+      >
+        <div
+          class="navigation-btn navigation-btn--disabled"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-dahpuh-MuiSvgIcon-root"
+            data-testid="ArrowBackIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"
+            />
+          </svg>
+        </div>
+        <div
+          class="slide-container"
+        >
+          <div
+            class="slide-item"
+          >
+            <div
+              class=""
+            >
+              01
+            </div>
+            <div
+              class="slide-item__day"
+            >
+              Mon
+            </div>
+          </div>
+          <div
+            class="slide-item"
+          >
+            <div
+              class=""
+            >
+              02
+            </div>
+            <div
+              class="slide-item__day"
+            >
+              Tue
+            </div>
+          </div>
+        </div>
+        <div
+          class="navigation-btn navigation-btn--disabled"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-dahpuh-MuiSvgIcon-root"
+            data-testid="ArrowForwardIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="button__controls"
+    >
+      <div
+        class="button button--disabled"
+      >
+        Book
+      </div>
+      <div
+        class="button button--disabled"
+      >
+        Cancel
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

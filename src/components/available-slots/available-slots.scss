@@ -1,0 +1,42 @@
+@import '@/_colors'; // Use the @ alias to reference the colors folder
+
+.available-slot {
+  font-family: sans-serif;
+
+  &__heading {
+    font-weight: 600;
+    font-size: 21px;
+    color: $black;
+  }
+
+  &__info {
+    margin-bottom: 21px;
+    color: $gray;
+    font-size: 13px;
+    margin-top: 4px;
+    font-weight: 600;
+  }
+
+  &__card-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 11px;
+    width: 85%;
+  }
+
+  &__card {
+    border: 1px solid $border;
+    padding: 8px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border-radius: 5px;
+    background-color: $white;
+    color: $black;
+    cursor: pointer;
+
+    &--selected {
+      background-color: $light-blue;
+    }
+  }
+}

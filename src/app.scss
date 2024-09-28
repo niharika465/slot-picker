@@ -1,0 +1,43 @@
+@import '@/_colors'; // Use the @ alias to reference the colors folder
+
+.container {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: $primary-color;
+  width: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: calc(100% - 100px);
+  }
+}
+
+.button {
+  background-color: $enabled-color;
+  color: $black;
+  padding: 9px 26px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 3px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 600;
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  &--disabled {
+    background-color: $disabled-color;
+    cursor: not-allowed;
+  }
+}
+
+.button:hover {
+  box-shadow:
+    0 6px 6px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

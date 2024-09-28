@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvailableSlots renders available slots 1`] = `
+<DocumentFragment>
+  <div
+    class="available-slot"
+  >
+    <div
+      class="available-slot__heading"
+    >
+      Available time slots
+    </div>
+    <div
+      class="available-slot__info"
+    >
+      Each session lasts for 30 minutes
+    </div>
+    <div
+      class="available-slot__card-list"
+    >
+      <div
+        class="available-slot__card"
+      >
+        09:00
+      </div>
+      <div
+        class="available-slot__card"
+      >
+        09:30
+      </div>
+      <div
+        class="available-slot__card"
+      >
+        10:00
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

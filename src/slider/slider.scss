@@ -1,0 +1,80 @@
+@import '@/_colors'; // Use the @ alias to reference the colors folder
+
+.slide-container {
+  display: flex;
+  overflow: auto;
+  flex-wrap: nowrap;
+  width: 400px;
+  margin: 10px;
+  gap: 8px;
+
+  scrollbar-color: $light-blue $primary-color;
+  scrollbar-width: thin;
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    background-color: $light-blue;
+    border: 4px solid transparent;
+    border-radius: 10px;
+  }
+}
+
+.slide-item {
+  padding: 20px 25px;
+  height: 40px;
+  background-color: $white;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-align: center;
+  cursor: pointer;
+
+  &__day {
+    padding-top: 10px;
+  }
+
+  &__date {
+    font-weight: 600;
+  }
+
+  &--selected {
+    background-color: $light-blue;
+  }
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  color: $black;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.navigation-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: $off-white;
+  padding: 5px;
+  text-align: center;
+
+  &--disabled {
+    background-color: $light-gray;
+  }
+}
