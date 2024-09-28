@@ -20,9 +20,14 @@
   &__card-list {
     display: flex;
     flex-wrap: wrap;
-
     gap: 11px;
     width: 85%;
+  }
+
+  @media screen and (max-width: 490px) {
+    &__card-list {
+      width: auto;
+    }
   }
 
   &__card {

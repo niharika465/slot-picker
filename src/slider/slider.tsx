@@ -142,7 +142,6 @@ const Slider: React.FC<SliderProps> = ({
   return (
     <div>
       <div className="heading">{heading}</div>
-      <div>{lastVisibleIndex}</div>
       <div className="slider">
         <div
           className={classNames('navigation-btn', {
